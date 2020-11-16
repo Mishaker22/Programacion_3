@@ -1,0 +1,81 @@
+/*
+$app->get('/', function (Request $request, Response $response, $args) {
+    $response->getBody()->write("Hello GET!");
+    return $response;
+});
+$app->get('/usuarios/{id}/[{edad}]', function ($request, $response, $args) {
+    $data = array('name' => 'Bob', 'age' => 40);
+    $payload = json_encode($args);
+
+    $response->getBody()->write($payload);
+    return $response
+          ->withHeader('Content-Type', 'application/json');
+});
+
+$app->get('/usuarios', function (Request $request, Response $response, $args) {
+    //$newResponse= $response->withStatus(302);
+    $data = array('name' => 'Bob', 'age' => 40);
+    $payload = json_encode($data);
+
+    $response->getBody()->write($payload);
+    return $response
+          ->withHeader('Content-Type', 'application/json');
+    //$newResponse= $response->withHeader('Content-type','application/json');
+    //$newResponse->getBody()->write("hello world");
+    //return $newResponse;
+});
+
+$app->post('/usuarios', function (Request $request, Response $response, $args) {
+    $response->getBody()->write("Hello POST!");
+
+    return $response;
+});
+*/
+/*$jwt=new \Clases\JWT();
+
+$key = "example_key";
+$payload = array(
+    "iss" => "http://example.org",
+    "aud" => "http://example.com",
+    "iat" => 1356999524,
+    "nbf" => 1357000000
+);
+/**
+ * IMPORTANT:
+ * You must specify supported algorithms for your application. See
+ * https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-40
+ * for a list of spec-compliant algorithms.
+ */
+/*$jwt = JWT::encode($payload, $key);
+$decoded = JWT::decode($jwt, $key, array('HS256'));
+
+print_r($decoded);
+
+$user= new Usuario;
+$user->name="Michell";
+echo $user->name;
+*/
+
+$app->group('/users', function (RouteCollectorProxy $group) {
+    $group->post('/', function ($request, $response, $args) {
+        $response->getBody()->write("Hello POST Users!");
+    
+        return $response;
+    });
+    $group->get('/{id}[/{edad}]', function ($request, $response, $args) {
+    $data = array('name' => 'Bob', 'age' => 40);
+    $payload = json_encode($args);
+    
+    $response->getBody()->write($payload);
+    return $response
+            ->withHeader('Content-Type', 'application/json');
+    });
+    $group->get('/{id}[/{edad}]', function ($request, $response, $args) {
+    $data = array('name' => 'Bob', 'age' => 40);
+    $payload = json_encode($args);
+    
+    $response->getBody()->write($payload);
+    return $response
+            ->withHeader('Content-Type', 'application/json');
+    });
+});

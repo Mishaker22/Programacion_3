@@ -1,0 +1,1 @@
+[{"_patente":"MYR 222","_color":"BLACK","_marca":"YAMAHA"},{"_patente":"VAR 900","_color":"WHITE","_marca":"ZANELLA"},{"_patente":"VAR 974","_color":"WHITE","_marca":"ZANELLA"},{"_patente":"VAR 974","_color":"WHITE","_marca":"ZANELLA"},{"_patente":"VAR 974","_color":"WHITE","_marca":"ZANELLA"},{"_patente":"VAR 974","_color":"WHITE","_marca":"ZANELLA"}]

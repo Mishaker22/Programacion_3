@@ -1,0 +1,25 @@
+{
+    "name": "miche/modelo2parcial",
+    "description": "",
+    "authors": [
+        {
+            "name": "Mishaker22",
+            "email": "michellq.hernandez@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^5.2",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.2",
+        "illuminate/database": "^8.14",
+        "illuminate/events": "^8.14"
+    },
+    "autoload": {
+        "psr-4": 
+        {
+            "Clases\\": "clases",
+            "App\\": "src",
+            "Config\\": "config"
+        }
+    }
+}

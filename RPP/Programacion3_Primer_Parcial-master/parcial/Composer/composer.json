@@ -1,0 +1,12 @@
+{
+    "name": "lautaro/composer",
+    "authors": [
+        {
+            "name": "Lautaro",
+            "email": "lautarogalarza_9@outlook.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^5.2"
+    }
+}
